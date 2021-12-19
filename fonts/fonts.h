@@ -82,12 +82,7 @@ extern const size_t font_builtin_fonts_count;
  * @param c Character
  * @return Character descriptor or NULL if no character found
  */
-inline const font_char_desc_t *font_get_char_desc(const font_info_t *fnt, char c)
-{
-    return c < fnt->char_start || c > fnt->char_end
-        ? NULL
-        : fnt->char_descriptors + c - fnt->char_start;
-}
+const font_char_desc_t *font_get_char_desc(const font_info_t *fnt, char c);
 
 /**
  * Calculate width of string in pixels
